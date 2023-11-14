@@ -25,12 +25,7 @@ public class TeleportWithSpoon : MonoBehaviour
             // Teleport the player to the destination position.
             CharacterPlayer.transform.position = PizzaTeleportPoint.position;
 
-            // After teleporting, trigger the timer script (if it exists).
-            SceneResetWithTimer timerScript = PizzaTeleportPoint.GetComponent<SceneResetWithTimer>();
-            if (timerScript != null)
-            {
-                timerScript.StartResetTimer();
-            }
+
         }
         else
         {

@@ -26,9 +26,19 @@ public class SceneResetWithTimer : MonoBehaviour
         }
     }
 
-    public void StartResetTimer()
+    private void OnCollisionEnter(Collision collision)
     {
-        // Start the timer when called.
+        // Check if the collision is with the spoon.
+        if (collision.gameObject.CompareTag("SpoonTeleport"))
+        {
+            // Start the timer when the spoon collides with the cube.
+            StartResetTimer();
+        }
+    }
+
+    private void StartResetTimer()
+    {
+        // Start the timer.
         timer = countdownTime;
         isTimerRunning = true;
     }
@@ -39,3 +49,4 @@ public class SceneResetWithTimer : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
+
