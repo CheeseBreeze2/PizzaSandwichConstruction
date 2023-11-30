@@ -46,7 +46,14 @@ public class SceneResetWithTimer : MonoBehaviour
     private void ResetScene()
     {
         // Reload the current scene to reset it.
+        var dontDestoyOnLoadScene = SceneManager.GetSceneByName("DontDestroyOnLoad");
+        var dontDestroyOnLoadGameObjects = dontDestoyOnLoadScene.GetRootGameObjects();
+        foreach (var dontdestroyGameObject in dontDestroyOnLoadGameObjects)
+        {
+            Destroy(gameObject);
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
 }
 
