@@ -53,7 +53,7 @@ public class SceneResetWithTimer : MonoBehaviour
         // {
         //    Destroy(gameObject);
         //}
-        SceneManager.LoadScene("LoadScene");
+        SceneManager.LoadScene("Scene_1");
         
     }
 }
