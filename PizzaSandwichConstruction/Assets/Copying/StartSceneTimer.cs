@@ -48,12 +48,12 @@ public class SceneResetWithTimer : MonoBehaviour
         // Reload the current scene to reset it.
         
         //var dontDestroyOnLoadGameObjects = dontDestoyOnLoadScene.GetRootGameObjects();
-        GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
-        foreach (object go in allObjects)
-         {
-            Destroy(gameObject);
-        }
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
+        //foreach (object go in allObjects)
+        // {
+        //    Destroy(gameObject);
+        //}
+        SceneManager.LoadScene("LoadScene");
         
     }
 }
